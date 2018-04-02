@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz1</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+<!-- Start your code here -->
+
+<div id="status"></div>
+<div id="status1" style="display: none"></div>
+<div id="status2" style="display: none"></div>
+
+<div id="quizContainer"class="container"> 
+<div class="title">Online Quiz</div>
+<div id="question" class="question"></div>
+<label class="option"><input type="radio" name="option" value="1"> <span id="opt1"></span></label>
+ <label class="option"><input type="radio" name="option" value="2"> <span id="opt2"></span></label>
+ <label class="option"><input type="radio" name="option" value="3"> <span id="opt3"></span></label>
+  <label class="option"><input type="radio" name="option" value="4"> <span id="opt4"></span></label>
+  <br>
+  <button id="nextButton" class="next-btn" onclick="loadNextQ();">Next Question</button>
+  <button id="prevButton" style="display:none" class="next-btn" onclick="return previous();">previous</button>
+  </div>
+  <div id="result" class="container result" style="display:none">
+    <p id="showR"></p>
+    <button id="part2" onclick="document.getElementById('checkArea').style.display ='block' ;
+     document.getElementById('result').style.display='none' ;
+     document.getElementById('status1').style.display ='block' ;
+     document.getElementById('status').style.display ='none' ;  countDown2(600,'status1'); " >Go to Part 2</button>
+   </div>
+  <div id="checkArea" style="display:none">
+    <div class="title">Online Quize</div>
+   <div class="question" id="checkQuestion"></div>
+    <fieldset id="CheckQ">
+    <label class="option"><input type="checkbox" name="option" value="1"><span id="op1"> </span></label>
+    <label class="option"><input type="checkbox" name="option" value="2"><span id="op2"> </span></label>
+    <label class="option"><input type="checkbox" name="option" value="3"><span id="op3"> </span></label>
+    <label class="option"><input type="checkbox" name="option" value="4"><span id="op4"> </span></label>
+      </fieldset>
+    <br>
+     <button id="nextCheckButton" class="next-btn" onclick="loadNextCheckQ();">Next Question</button>
+     <button id="prevCheckButton" style="display:none" class="next-btn" onclick="prevLNC();" >previous </button>
+  </div>
+  <div id="resultC" class="container result" style="display:none">
+    <p id="showRC"></p>
+   
+    <button  id="part31" onclick=" document.getElementById('part3').style.display = 'block' ; 
+    document.getElementById('resultC').style.display = 'none' ; 
+    document.getElementById('status2').style.display = 'block' ; 
+    document.getElementById('status1').style.display = 'none' ;
+    document.getElementById('status').style.display = 'none' ;
+     countDown3(240,'status2');">Go to Part 3</button>
+   </div>
+   <div id="part3" style="display:none">
+        
+
+        
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p id="q">Superman</p>
+        </div>
+        <br>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+        <img id="drag1" src="super.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69" style=" padding:2px";>
+        <img id="drag2" src="ball.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69" style=" padding:2px";>
+        <img id="drag3" src="car.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69" style="padding:2px";>
+        
+        <img id="drag21" src="kuwiat.png" draggable="true" ondragstart="drag(event)" width="100" height="69" style="display:none ; padding:2px";>
+        <img id="drag22" src="egypt.png" draggable="true" ondragstart="drag(event)" width="100" height="69" style="display:none ; padding:2px";>
+        <img id="drag23" src="saudi.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69" style="display:none ; padding:2px";>
+        </div><br><br>
+        
+        <button id="next" name="next" onclick="changeImage()">next</button>
+        <button id="submit" name="submit" onclick="FinalResultFun();"
+        style="display:none">submit</button>
+        <button id="chartR" name="chartR" onclick="ChartFun();"
+        style="display:none">submit</button>
+        <button id="previos" name="previos" onclick="previos()" style="display:none">previous</button>
+        
+        </div>
+        
+          
+          <div id="chartContainer" style="height: 700px; width: 100%;"></div>
+         
+          <div id="checkBoxContainer" style = "height: 700px; width: 100%; "></div>
+          <div id="FinalResult">
+            <p id="p11"></p>
+            <button id="SSS" name="SSS" onclick="ChartFun()">CHART</button>
+          </div>
+          <button id="SSS" name="SSS" onclick="ChartFun()" style="display:none">CHART</button>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+       
+  
+<!-- End your code here -->
+<script type="text/javascript" src="script.js"></script>
+
+
+</body>
+</html>
